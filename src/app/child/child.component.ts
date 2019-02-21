@@ -7,7 +7,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class ChildComponent implements OnInit {
 
-  @Input() PData: number; //coming from parent (input from parent)
+  @Input() PData: number; //data source bound in template [] and assigned data
   @Output() childEvent = new EventEmitter(); //store the eventEmitter
   constructor() { }
   onChange(value) {

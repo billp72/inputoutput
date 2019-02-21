@@ -1,0 +1,11 @@
+<h3>Parent Component</h3>
+
+<label>Parent Component</label>
+<!--#pcomponent holds the value of keyup-->
+<input type="text" #pcomponent (keyup)="0"/>
+
+<p>Value of child component is: {{ CData }}</p>
+<app-child [PData]="pcomponent.value" (childEvent)="CData=$event"></app-child>
+<!-- [] brakets uses @Input from ts file to html and () uses @Output and is from html to ts-->
+<!--data coming from parent is PData event triggering -->
+

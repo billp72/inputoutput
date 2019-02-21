@@ -5,7 +5,7 @@
 <input type="text" #pcomponent (keyup)="0"/>
 
 <p>Value of child component is: {{ CData }}</p>
-<app-child [PData]="pcomponent.value" (childEvent)="CData=$event"></app-child>
+<app-child [PData]="pcomponent.value" (childEvent)="CData=$event"></app-child><!--trigger childsEvent and pass the event to the parent's CData prop. Sqr brk hold data coming from it's parant input field-->
 <!-- [] brakets uses @Input from ts file to html and () uses @Output and is from html to ts-->
 <!--data coming from parent is PData event triggering -->
 
